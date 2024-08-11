@@ -1,0 +1,152 @@
+.page-container {
+    padding: 20px;
+
+    .banner-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+
+        .banner-content {
+            display: flex;
+            align-items: center;
+
+            .image-container {
+                flex: 1;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+
+            .text-container {
+                flex: 1;
+                text-align: center;
+
+                h2 {
+                    font-size: 36px;
+                    color: #ff0000;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .logo-container {
+            img {
+                max-width: 150px;
+                height: auto;
+            }
+        }
+    }
+
+    .text-section, .price-strategy-section {
+        margin-top: 30px;
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333;
+        }
+    }
+
+    .price-strategy-section {
+        h3 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// media
+@media (max-width: 1024px) {
+    .banner-section {
+        flex-direction: column;
+        text-align: center;
+
+        .banner-content {
+            flex-direction: column;
+
+            .image-container, .text-container {
+                flex: none;
+                margin-bottom: 20px;
+            }
+
+            .text-container h2 {
+                font-size: 30px;
+            }
+        }
+
+        .logo-container {
+            img {
+                max-width: 120px;
+            }
+        }
+    }
+
+    .text-section, .price-strategy-section {
+        p {
+            font-size: 15px;
+        }
+    }
+
+    .price-strategy-section {
+        h3 {
+            font-size: 22px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .banner-section {
+        .banner-content .text-container h2 {
+            font-size: 26px;
+        }
+
+        .logo-container {
+            img {
+                max-width: 100px;
+            }
+        }
+    }
+
+    .text-section, .price-strategy-section {
+        p {
+            font-size: 14px;
+        }
+    }
+
+    .price-strategy-section {
+        h3 {
+            font-size: 20px;
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .banner-section {
+        .banner-content .text-container h2 {
+            font-size: 20px;
+        }
+
+        .logo-container {
+            img {
+                max-width: 80px;
+            }
+        }
+    }
+
+    .text-section, .price-strategy-section {
+        p {
+            font-size: 13px;
+        }
+    }
+
+    .price-strategy-section {
+        h3 {
+            font-size: 18px;
+        }
+    }
+}

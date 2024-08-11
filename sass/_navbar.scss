@@ -1,0 +1,144 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+    .logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 200px;
+            margin-right: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin: 0;
+        }
+    }
+
+    .nav__links {
+        display: flex;
+        list-style: none;
+
+        li {
+            margin: 0 15px;
+
+            a {
+                text-decoration: none;
+                font-size: 16px;
+                color: #333;
+                transition: color 0.3s;
+
+                &:hover {
+                    color: #ff0000;
+                }
+            }
+        }
+    }
+
+    .search-cart {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        padding: 5px 10px;
+        background-color: #f9f9f9;
+
+        input {
+            border: none;
+            outline: none;
+            padding: 8px;
+            border-radius: 20px;
+            font-size: 14px;
+            background-color: transparent;
+            width: 150px
+        }
+
+        .search-btn {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            margin-left: 10px;
+
+            img {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+}
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    
+    div {
+        background-color: #333;
+        height: 3px;
+        width: 25px;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+}
+
+
+//   media
+@media (max-width: 370px){
+    .navbar{
+        .logo{
+            img{
+                width: 140px;
+            }
+        }
+    }
+    .burger-menu {
+        div {
+            background-color: #333;
+            height: 2px;
+            width: 23px;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+    }
+    
+    
+}
+@media (max-width: 570px){
+    .navbar{
+        .search-cart{
+            display: none;
+        }
+    }
+}
+@media (max-width: 1000px) {
+    .navbar {
+        .burger-menu {
+            display: block;
+        }
+
+        .nav__links.active {
+            transform: translateX(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+    .nav__links {
+        position: fixed;
+        top: 60px;
+        right: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+}

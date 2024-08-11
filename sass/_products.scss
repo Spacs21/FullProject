@@ -1,0 +1,125 @@
+.products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px 0;
+
+    .product-item {
+        flex: 1 1 20%;
+        max-width: 220px;
+        text-align: center;
+        margin: 20px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .sale {
+            color: red;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .product-name {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
+
+.about-us {
+    text-align: center;
+    margin: 50px 0;
+
+    .about-us-content {
+        max-width: 800px;
+        margin: 0 auto;
+
+        h3 {
+            font-size: 28px;
+            color: #ff0000;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+    }
+
+    .about-us-images {
+        display: flex;
+        justify-content: center;
+
+        .image-text, .image-logo {
+            margin: 0 20px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            p {
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+// media
+@media (max-width: 768px) {
+    .products {
+        .product-item {
+            flex: 1 1 45%;
+            max-width: 180px;
+        }
+    }
+
+    .about-us-images {
+        flex-direction: column;
+        align-items: center;
+
+        .image-text, .image-logo {
+            margin: 20px 0;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .products {
+        .product-item {
+            flex: 1 1 100%;
+            max-width: 100%;
+        }
+    }
+
+    .about-us-content h3 {
+        font-size: 24px;
+    }
+
+    .about-us-content p {
+        font-size: 14px;
+    }
+}

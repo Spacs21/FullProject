@@ -1,0 +1,134 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 50px;
+
+    .banner__text {
+        max-width: 50%;
+
+        h2 {
+            font-size: 48px;
+            color: #000;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: #ff0000;
+            font-weight: bold;
+            line-height: 1.2;
+            margin: 20px 0;
+        }
+
+        .shop-button {
+            padding: 10px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #ff0000;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #cc0000;
+            }
+        }
+    }
+
+    .banner__image {
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// media
+@media (max-width: 1024px) {
+    .banner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+
+        .banner__text {
+            max-width: 90%;
+            h2 {
+                font-size: 36px;
+            }
+
+            h1 {
+                font-size: 48px;
+            }
+
+            .shop-button {
+                font-size: 16px;
+                padding: 8px 16px;
+            }
+        }
+
+        .banner__image {
+            margin-top: 20px;
+            img {
+                max-width: 80%;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        margin-top: 20px;
+
+        .banner__text {
+            max-width: 100%;
+
+            h2 {
+                font-size: 28px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .shop-button {
+                font-size: 14px;
+                padding: 6px 12px;
+            }
+        }
+
+        .banner__image {
+            img {
+                max-width: 90%;
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    .banner {
+        .banner__text {
+            h2 {
+                font-size: 24px;
+            }
+
+            h1 {
+                font-size: 30px;
+            }
+
+            .shop-button {
+                font-size: 12px;
+                padding: 5px 10px;
+            }
+        }
+
+        .banner__image {
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
